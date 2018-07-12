@@ -1,0 +1,9 @@
+Package: com.jakeashacks.catchathief
+Name: CatchaThief
+Depends: mobilesubstrate
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Take a picture of whoever inputs an incorrect passcode! Does not support Touch ID/Face ID yet. Images are stored in /var/mobile/catchathief. Sending images via email is being looked into.
+Maintainer: Jake James
+Author: Jake James
+Section: Tweaks
