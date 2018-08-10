@@ -2,6 +2,10 @@
 #import <sys/stat.h>
 #import <dlfcn.h>
 
+NSDictionary *bundle = [[NSUserDefaults standardUserDefaults] persistentDomainForName:@"com.jakeashacks.catchathiefsettings"];
+
+id enabled = [bundle valueForKey:@"enabled"];
+
 @interface SBMediaController
 +(id)sharedInstance;
 -(BOOL)isRingerMuted;
@@ -10,6 +14,8 @@
 
 //credits to Lucas Jackson aka neoneggplant https://github.com/neoneggplant/camshot/blob/master/main.mm
 void takepicture(BOOL isfront,char* filename) {
+
+if ([enabled isEqual:@1]) {
 
     BOOL isMuted = [[%c(SBMediaController) sharedInstance] isRingerMuted];
     if (!isMuted)  [[%c(SBMediaController) sharedInstance] setRingerMuted:true];
@@ -28,10 +34,13 @@ void takepicture(BOOL isfront,char* filename) {
 
     if (!isMuted)  [[%c(SBMediaController) sharedInstance] setRingerMuted:false];
 }
+}
 
 
 %hook SBFUserAuthenticationController
 - (long long)_evaluateAuthenticationAttempt:(id)arg1 outError:(id)arg2 {
+
+if ([enabled isEqual:@1]) {
 
     long long ret = %orig;
     if (ret != 2) {
@@ -45,6 +54,7 @@ void takepicture(BOOL isfront,char* filename) {
     
     return ret;
 
+}
 }
 %end
 
