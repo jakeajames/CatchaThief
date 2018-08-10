@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+    <dict>
+        <key>cell</key>
+        <string>PSGroupCell</string>
+        <key>footerText</key>
+        <string>Respring to enable/disable</string>
+        <key>label</key>
+        <string>Options</string>
+    </dict>
+    <dict>
+       <key>cell</key>
+       <string>PSSwitchCell</string>
+       <key>default</key>
+       </true>
+       <key>defaults</key>
+       <string>com.jakeashacks.catchathiefsettings</string>
+       <key>key</key>
+       <string>enabled</string>
+    </dict>
+    <dict>
+        <key>cell</key>
+        <string>PSButtonCell</key>
+        <key>action</key>
+        <string>respring</string>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Check out the source code on GitHub.</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>twitter:</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>icon</key>
+			<string>twitter.png</string>
+			<key>label</key>
+			<string>Twitter</string>
+      <key>id</key>
+      <string>twitter</string>
+      <key>icon</key>
+      <string>twitter.png</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>github:</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>icon</key>
+			<string>github.png</string>
+			<key>label</key>
+			<string>GitHub</string>
+      <key>id</key>
+      <string>github</string>
+      <key>icon</key>
+      <string>github.png</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Catcha Thief by Jake James</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Catcha Thief</string>
+</dict>
+</plist>
